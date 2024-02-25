@@ -1,5 +1,5 @@
 pipeline {
-    agent mvn
+    agent any
     stages {
         stage('git pull') { 
             steps {
