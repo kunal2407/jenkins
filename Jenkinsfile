@@ -29,13 +29,13 @@ pipeline {
         }
         stage('deploy') {
             agent {
-                label 'depoy'
+                label 'deploy'
             }
             steps {
                 sh '''
                 cd /home/ec2-user/
                 git pull https://github.com/Shivampandhare/jenkins-demo-1.git master
-                sudo kubectl apply -f /home/ubuntu/deploy.yaml
+                sudo kubectl apply -f /home/ec2-user/deploy.yaml
                 '''
             }
         }
