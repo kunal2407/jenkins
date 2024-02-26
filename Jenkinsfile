@@ -18,7 +18,7 @@ pipeline {
             agent {
                 label 'mvn'
             }
-            step {
+            steps {
                 sh '''
                     sudo docker login
                     sudo docker buid -t avi087/jentom:latest -f Dockerfile /home/ubuntu/workspace/k8/
@@ -29,7 +29,7 @@ pipeline {
             agent {
                 label 'mvn'
             }
-            step {
+            steps {
                 sh '''
                 sudo kubectl apply -f /home/ubuntu/workspace/k8/deploy.yaml
                 '''
