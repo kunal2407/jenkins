@@ -29,7 +29,7 @@ pipeline {
         }
         stage('deploy') {
             agent {
-                label 'mvn'
+                label 'depoy'
             }
             steps {
                 sh '''
