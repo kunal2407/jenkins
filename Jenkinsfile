@@ -22,8 +22,8 @@ pipeline {
                 sh '''
                     cd /home/ubuntu/workspace/k8/
                     sudo docker login
-                    sudo docker build -t avi087/jentom:latest -f Dockerfile .
-                    sudo docker push avi087/jentom:latest
+                    sudo docker build -t kunal2411/jentom:latest -f Dockerfile .
+                    sudo docker push kunal2411/jentom:latest
                 '''
             }
         }
