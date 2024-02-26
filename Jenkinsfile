@@ -21,7 +21,8 @@ pipeline {
             steps {
                 sh '''
                     sudo docker login
-                    sudo docker buid -t avi087/jentom:latest -f Dockerfile /home/ubuntu/workspace/k8/
+                    sudo docker build -t avi087/jentom:latest -f Dockerfile /home/ubuntu/workspace/k8/
+                    sudo docker push avi087/jentom:latest
                 '''
             }
         }
