@@ -20,7 +20,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    cd /home/ubuntu/workspace/k8/
+                    cd /home/ec2-user/workspace/k8/
                     sudo docker login
                     sudo docker build -t kunal2411/jentom:latest -f Dockerfile .
                     sudo docker push kunal2411/jentom:latest
@@ -33,7 +33,7 @@ pipeline {
             }
             steps {
                 sh '''
-                sudo kubectl apply -f /home/ubuntu/workspace/k8/deploy.yaml
+                sudo kubectl apply -f /home/ec2-user/workspace/k8/deploy.yaml
                 '''
             }
         }
