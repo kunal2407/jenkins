@@ -1,7 +1,7 @@
 pipeline {
+    agent any
     stages {
-        stage('git pull') {
-            agent any 
+        stage('git pull') { 
             steps {
                 git 'https://github.com/deepak-umre/studentapp.ui.git'
             }
